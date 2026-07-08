@@ -1,0 +1,27 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/app
+      - ./data:/app/data  
+    command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
+
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/app
+    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+    depends_on:
+      - api
+
+  playground:
+    build: ./playground
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./playground:/code

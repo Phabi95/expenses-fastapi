@@ -1,0 +1,15 @@
+fastapi
+pydantic>=2.7.0,<3.0.0
+sqlalchemy>=2.0.0,<3.0.0
+psycopg2-binary
+PyJWT
+pwdlib[argon2]
+uvicorn
+sqlmodel
+alembic
+aiosqlite
+pydantic-settings
+email-validator
+python-multipart
+fastapi-mail
+python-dotenv
