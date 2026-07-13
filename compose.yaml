@@ -17,11 +17,4 @@ services:
       - ./frontend:/app
     command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
     depends_on:
-      - api
-
-  playground:
-    build: ./playground
-    ports:
-      - "8081:8081"
-    volumes:
-      - ./playground:/code
+      - backend
