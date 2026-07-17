@@ -72,12 +72,15 @@ docker compose up --build
 ### `.env` example
 
 ```env
-database_url=sqlite+aiosqlite:///./data/app.db
-first_superuser_email=admin@example.com
-first_superuser_password=change-me
-secret_key=change-me
+DATABASE_URL=sqlite+aiosqlite:////app/data/database.db
+FIRST_SUPERUSER_EMAIL=admin@example.com
+FIRST_SUPERUSER_PASSWORD=change-me
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+MAIL_FROM=your-email@gmail.com
+SECRET_KEY=generate-a-long-random-value
 ```
-> Matches `src/config.py` (`Settings` class).
+> Matches `src/config.py` (`Settings` class). **Never commit real values** — this file is a template only; the real `.env` stays in `.gitignore`.
 
 ---
 
