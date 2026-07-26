@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 
 Backend for tracking, approving and reporting company expenses.
-Built with **FastAPI**, **SQLModel**, **PostgreSQL**, **Alembic**, **JWT auth**, **Docker Compose**. Frontend: **Streamlit**.
+Built with **FastAPI**, **SQLModel**, **SQLite**, **Alembic**, **JWT auth**, **Docker Compose**. Frontend: **Streamlit**.
 
 > 🚧 **Work in progress** — core API + auth + migrations are working, features below are actively being added. Not production-ready yet (see Roadmap).
 
